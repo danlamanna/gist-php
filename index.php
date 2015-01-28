@@ -1,7 +1,7 @@
 <?php
 
 require "vendor/autoload.php";
-require "constants.php";
+require "config.php";
 
 $app = new \Slim\Slim();
 
