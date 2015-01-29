@@ -24,7 +24,7 @@
             <?php endif; ?>
 
             <div>
-                <textarea readonly rows="25" cols="140"><?php echo $gist; ?></textarea>
+                <textarea readonly rows="<?php echo max(28, substr_count($gist, "\n")); ?>" cols="140"><?php echo $gist; ?></textarea>
             </div>
         </div>
     </body>
