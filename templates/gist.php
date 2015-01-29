@@ -19,12 +19,12 @@
             <?php if (strpos($gist, "-----BEGIN PGP MESSAGE-----") === 0): ?>
                 <div class="alert" role="alert">
                     Was this meant for you?<br />
-                    <code>curl --silent <?php echo GIST_DOMAIN . "/" . GISTS_DIR . "/" . $gist_id; ?> | gpg --decrypt</code>
+                    <code>curl --insecure --silent <?php echo GIST_DOMAIN . "/" . GISTS_DIR . "/" . $gist_id; ?> | gpg --decrypt</code>
                 </div>
             <?php endif; ?>
 
             <div>
-                <textarea rows="25" cols="140"><?php echo $gist; ?></textarea>
+                <textarea readonly rows="25" cols="140"><?php echo $gist; ?></textarea>
             </div>
         </div>
     </body>
